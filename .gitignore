@@ -10,3 +10,5 @@ venv/
 models/*.pkl
 *.log
 .DS_Store
+*.tsbuildinfo
+frontend/vite.config.js
