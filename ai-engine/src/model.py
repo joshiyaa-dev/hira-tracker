@@ -84,33 +84,40 @@ class FitnessModel:
         return mapping.get(goal.lower(), 3)
     
     def predict_calories(self, user_data: Dict[str, Any]) -> float:
-        """P Predict daily calorie requirement"""
-        features = self.prepare_features(user_data)
-        if self.calorie_model is None:
-            # Rule-based fallback
+        """Predict daily calorie requirement"""
+        try:
+            from sklearn.utils.validation import check_is_fitted
+            check_is_fitted(self.calorie_model)
+            features = self.prepare_features(user_data)
+            return float(self.calorie_model.predict(features)[0])
+        except Exception:
             return self._calculate_calorie_rule_based(user_data)
-        return float(self.calorie_model.predict(features)[0])
-    
+
     def predict_protein(self, user_data: Dict[str, Any]) -> float:
         """Predict daily protein requirement (grams)"""
-        features = self.prepare_features(user_data)
-        if self.protein_model is None:
+        try:
+            from sklearn.utils.validation import check_is_fitted
+            check_is_fitted(self.protein_model)
+            features = self.prepare_features(user_data)
+            return float(self.protein_model.predict(features)[0])
+        except Exception:
             return self._calculate_protein_rule_based(user_data)
-        return float(self.protein_model.predict(features)[0])
-    
+
     def predict_intensity(self, user_data: Dict[str, Any]) -> str:
         """Predict recommended intensity"""
-        features = self.prepare_features(user_data)
-        if self.intensity_model is None:
+        try:
+            from sklearn.utils.validation import check_is_fitted
+            check_is_fitted(self.intensity_model)
+            features = self.prepare_features(user_data)
+            prediction = float(self.intensity_model.predict(features)[0])
+            if prediction < 0.33:
+                return 'light'
+            elif prediction < 0.66:
+                return 'normal'
+            else:
+                return 'push'
+        except Exception:
             return self._calculate_intensity_rule_based(user_data)
-        
-        prediction = float(self.intensity_model.predict(features)[0])
-        if prediction < 0.33:
-            return 'light'
-        elif prediction < 0.66:
-            return 'normal'
-        else:
-            return 'push'
     
     @staticmethod
     def _calculate_calorie_rule_based(user_data: Dict[str, Any]) -> float:

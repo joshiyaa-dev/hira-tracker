@@ -31,7 +31,7 @@ app.add_middleware(
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Initialize recommendation engine
+# Initialize recommendation engine (single instance — preserves in-memory history)
 engine = RecommendationEngine()
 
 # Pydantic models
@@ -46,7 +46,8 @@ class UserData(BaseModel):
     gym_experience: str
     fitness_goal: str
     diet_type: Optional[str] = 'non-veg'
-    readiness_score: Optional[int] = 75
+    readiness_score: Optional[float] = 75
+    current_protein: Optional[float] = 0  # grams consumed so far today
 
 class CheckInData(BaseModel):
     energy: int  # 1-10
@@ -85,7 +86,7 @@ async def generate_workout(user: UserData):
 # Meal suggestions
 @app.post("/meal-suggestions")
 async def get_meal_suggestions(user: UserData):
-    """Get meal suggestions"""
+    """Get meal suggestions with protein deficiency detection"""
     try:
         user_dict = user.dict()
         meals = engine.suggest_meals(user_dict)

@@ -13,12 +13,10 @@ const LoginScreen: React.FC = () => {
   const [step, setStep] = useState<'language' | 'phone' | 'otp'>('language');
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
-  const [language, setLanguageState] = useState<'en' | 'ta' | 'hi'>('en');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   const handleLanguageSelect = (lang: 'en' | 'ta' | 'hi') => {
-    setLanguageState(lang);
     setLanguage(lang);
     setStep('phone');
   };

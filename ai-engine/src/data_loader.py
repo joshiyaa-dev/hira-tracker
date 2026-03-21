@@ -1,33 +1,45 @@
 import pandas as pd
 import numpy as np
 import json
+import os
 from pathlib import Path
 from typing import List, Dict, Any
 
+# Resolve dataset paths relative to this file's location
+_SRC_DIR = Path(__file__).parent          # ai-engine/src/
+_AI_DIR = _SRC_DIR.parent                 # ai-engine/
+_REPO_ROOT = _AI_DIR.parent              # repo root
+
+_DEFAULT_WORKOUTS = _REPO_ROOT / "datasets" / "workouts" / "exercises.json"
+_DEFAULT_FOODS = _REPO_ROOT / "datasets" / "foods" / "indian_foods.json"
+
+
 class DataLoader:
-    def __init__(self, data_path: str = "./data/"):
-        self.data_path = Path(data_path)
+    def __init__(self, data_path: str = ""):
+        # data_path is ignored; we use the resolved paths above
         self.workout_data = None
         self.food_data = None
         self.load_all_data()
-    
+
     def load_all_data(self):
         """Load all datasets"""
         self.workout_data = self.load_workouts()
         self.food_data = self.load_foods()
-    
+
     def load_workouts(self) -> pd.DataFrame:
         """Load workout dataset"""
         try:
-            return pd.read_json(self.data_path / "workouts.json")
+            path = Path(os.getenv("WORKOUTS_DATA_PATH", str(_DEFAULT_WORKOUTS)))
+            return pd.read_json(path)
         except Exception as e:
             print(f"Warning: Could not load workouts: {e}")
             return pd.DataFrame()
-    
+
     def load_foods(self) -> pd.DataFrame:
         """Load food dataset"""
         try:
-            return pd.read_json(self.data_path / "foods.json")
+            path = Path(os.getenv("FOODS_DATA_PATH", str(_DEFAULT_FOODS)))
+            return pd.read_json(path)
         except Exception as e:
             print(f"Warning: Could not load foods: {e}")
             return pd.DataFrame()
@@ -73,6 +85,12 @@ class DataLoader:
         ]
         return filtered.to_dict('records')
     
+    def get_all_foods(self) -> List[Dict]:
+        """Get all foods regardless of diet type"""
+        if self.food_data.empty:
+            return []
+        return self.food_data.to_dict('records')
+
     def search_foods(self, query: str) -> List[Dict]:
         """Search foods by name"""
         if self.food_data.empty:
