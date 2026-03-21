@@ -25,6 +25,21 @@ class APIClient {
       }
       return config;
     });
+
+    // Response interceptor for global error handling
+    this.client.interceptors.response.use(
+      (response) => response,
+      async (error) => {
+        const config = error.config;
+        // Retry once on network errors
+        if (!config._retried && (error.code === 'ECONNABORTED' || !error.response)) {
+          config._retried = true;
+          await new Promise((r) => setTimeout(r, 1000));
+          return this.client(config);
+        }
+        return Promise.reject(error);
+      }
+    );
   }
 
   setToken(token: string) {
@@ -69,8 +84,10 @@ class APIClient {
   }
 
   // Workout APIs
-  async generateWorkoutPlan(userId: string) {
-    return this.client.post<WorkoutPlan>(`/workouts/${userId}/generate`, {});
+  async generateWorkoutPlan(userId: string, readinessScore?: number) {
+    return this.client.post<WorkoutPlan>(`/workouts/${userId}/generate`, {
+      readiness_score: readinessScore ?? 75,
+    });
   }
 
   async getTodayWorkout(userId: string) {
@@ -122,6 +139,30 @@ class APIClient {
   }
 
   // AI APIs
+
+  /** Generate a full daily workout plan from the AI engine */
+  async generatePlan(userId: string, readinessScore?: number) {
+    return this.client.post(`/ai/${userId}/generate-plan`, {
+      readiness_score: readinessScore ?? 75,
+    });
+  }
+
+  /** Get AI-powered meal suggestions, passing current protein consumed */
+  async getMealSuggestions(userId: string, currentProtein?: number) {
+    return this.client.post(`/ai/${userId}/meal-suggestion`, {
+      current_protein: currentProtein ?? 0,
+    });
+  }
+
+  /** Update intensity based on daily check-in (sleep, stress, soreness, energy) */
+  async adjustPlan(
+    userId: string,
+    checkIn: { sleep: number; stress: number; soreness: number; energy: number }
+  ) {
+    return this.client.post(`/ai/${userId}/adjust-plan`, checkIn);
+  }
+
+  // Legacy AI APIs (kept for backward compatibility)
   async generateMealSuggestions(userId: string) {
     return this.client.post(`/ai/${userId}/meal-suggestions`, {});
   }

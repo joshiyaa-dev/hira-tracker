@@ -1,9 +1,27 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronLeft, Moon, LogOut, Lock, Bell, Globe } from 'lucide-react';
+import { ChevronLeft, Moon, LogOut, Lock, Bell, Globe, LucideIcon } from 'lucide-react';
 import { useAppStore } from '@/store/useAppStore';
 import { apiClient } from '@/services/api';
+
+type ToggleItem = {
+  label: string;
+  icon: LucideIcon;
+  isToggle: true;
+  value: boolean;
+  action: () => void;
+};
+
+type ActionItem = {
+  label: string;
+  icon: LucideIcon;
+  isToggle?: false;
+  description?: string;
+  action: () => void;
+};
+
+type SettingsItem = ToggleItem | ActionItem;
 
 const SettingsScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -19,7 +37,7 @@ const SettingsScreen: React.FC = () => {
     navigate('/login');
   };
 
-  const settingsSections = [
+  const settingsSections: { title: string; items: SettingsItem[] }[] = [
     {
       title: 'Display',
       items: [
@@ -39,7 +57,10 @@ const SettingsScreen: React.FC = () => {
           label: 'Select Language',
           icon: Globe,
           description: `Current: ${language === 'en' ? 'English' : language === 'hi' ? 'हिंदी' : 'தமிழ்'}`,
-          onClick: () => {},
+          action: () => {
+            const next = language === 'en' ? 'hi' : language === 'hi' ? 'ta' : 'en';
+            setLanguage(next);
+          },
         },
       ],
     },
@@ -51,12 +72,14 @@ const SettingsScreen: React.FC = () => {
           icon: Bell,
           isToggle: true,
           value: true,
+          action: () => {},
         },
         {
           label: 'Meal Suggestions',
           icon: Bell,
           isToggle: true,
           value: true,
+          action: () => {},
         },
       ],
     },
@@ -115,7 +138,7 @@ const SettingsScreen: React.FC = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: sectionIndex * 0.1 + itemIndex * 0.05 }}
-                    onClick={item.action || (() => {})}
+                    onClick={item.action}
                     className="w-full card flex items-center justify-between hover:shadow-md transition"
                   >
                     <div className="flex items-center gap-3">
@@ -124,7 +147,7 @@ const SettingsScreen: React.FC = () => {
                         <p className="font-medium text-gray-900 dark:text-white">
                           {item.label}
                         </p>
-                        {item.description && (
+                        {!item.isToggle && item.description && (
                           <p className="text-xs text-gray-600 dark:text-gray-400">
                             {item.description}
                           </p>
