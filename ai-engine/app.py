@@ -47,6 +47,8 @@ class UserData(BaseModel):
     fitness_goal: str
     diet_type: Optional[str] = 'non-veg'
     readiness_score: Optional[int] = 75
+    # Optional: protein intake as fraction of target (0.0–1.0)
+    protein_pct: Optional[float] = 1.0
 
 class CheckInData(BaseModel):
     energy: int  # 1-10
@@ -54,6 +56,10 @@ class CheckInData(BaseModel):
     stress: int  # 1-10
     soreness: int  # 1-10
     notes: Optional[str] = None
+
+class AdjustPlanRequest(BaseModel):
+    user: UserData
+    checkin: CheckInData
 
 class IntensityAdjustment(BaseModel):
     intensity: str  # light, normal, push
@@ -67,10 +73,10 @@ async def health_check():
         "version": "1.0.0",
     }
 
-# Generate workout
+# Generate workout plan
 @app.post("/generate-plan")
 async def generate_workout(user: UserData):
-    """Generate personalized workout plan"""
+    """Generate personalized workout plan with explanation"""
     try:
         user_dict = user.dict()
         workout = engine.generate_workout(user_dict)
@@ -85,7 +91,7 @@ async def generate_workout(user: UserData):
 # Meal suggestions
 @app.post("/meal-suggestions")
 async def get_meal_suggestions(user: UserData):
-    """Get meal suggestions"""
+    """Get meal suggestions with protein-deficiency awareness"""
     try:
         user_dict = user.dict()
         meals = engine.suggest_meals(user_dict)
@@ -100,7 +106,7 @@ async def get_meal_suggestions(user: UserData):
 # Readiness score
 @app.post("/readiness-score")
 async def get_readiness_score(checkin: CheckInData):
-    """Calculate readiness score"""
+    """Calculate readiness score from check-in data"""
     try:
         checkin_dict = checkin.dict()
         readiness = engine.calculate_readiness_score(checkin_dict)
@@ -112,13 +118,30 @@ async def get_readiness_score(checkin: CheckInData):
         logger.error(f"Error calculating readiness: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-# Adjust intensity
+# Adjust plan based on daily check-in (combined endpoint)
+@app.post("/adjust-plan")
+async def adjust_plan(request: AdjustPlanRequest):
+    """Adjust full workout plan based on today's check-in data"""
+    try:
+        user_dict = request.user.dict()
+        checkin_dict = request.checkin.dict()
+        result = engine.adjust_plan(user_dict, checkin_dict)
+        return {
+            "success": True,
+            "data": result,
+        }
+    except Exception as e:
+        logger.error(f"Error adjusting plan: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Adjust intensity only
 @app.post("/adjust-intensity")
-async def adjust_intensity(user: UserData, intensity_adj: IntensityAdjustment):
-    """Adjust workout intensity based on readiness"""
+async def adjust_intensity(user: UserData, checkin: CheckInData):
+    """Adjust workout intensity based on check-in readiness data"""
     try:
         user_dict = user.dict()
-        intensity = engine.adjust_intensity(user_dict, intensity_adj.dict())
+        checkin_dict = checkin.dict()
+        intensity = engine.adjust_intensity(user_dict, checkin_dict)
         return {
             "success": True,
             "data": {"intensity": intensity},
@@ -138,6 +161,7 @@ async def root():
             "/generate-plan",
             "/meal-suggestions",
             "/readiness-score",
+            "/adjust-plan",
             "/adjust-intensity",
         ],
     }

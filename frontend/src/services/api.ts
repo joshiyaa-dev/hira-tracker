@@ -104,8 +104,10 @@ class APIClient {
     return this.client.get<Food[]>('/foods/search', { params: { q: query } });
   }
 
-  async getFoodSuggestions(userId: string) {
-    return this.client.get(`/nutrition/${userId}/suggestions`);
+  async getFoodSuggestions(userId: string, proteinPct?: number) {
+    return this.client.get(`/nutrition/${userId}/suggestions`, {
+      params: proteinPct !== undefined ? { proteinPct } : {},
+    });
   }
 
   // Health Check-in APIs

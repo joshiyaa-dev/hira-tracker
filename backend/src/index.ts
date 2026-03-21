@@ -2,6 +2,7 @@ import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import axios from 'axios';
 
 // Load environment variables
 dotenv.config();
@@ -19,6 +20,7 @@ import smartwatchRoutes from './routes/smartwatch';
 const app: Express = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hira';
+const AI_ENGINE_URL = process.env.AI_ENGINE_URL || 'http://localhost:8000';
 
 // Middleware
 app.use(cors({
@@ -43,6 +45,40 @@ app.use('/api/health', healthRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/foods', foodRoutes);
 app.use('/api/smartwatch', smartwatchRoutes);
+
+// ── Top-level convenience endpoints (proxy to AI engine) ─────────────────────
+
+// POST /api/generate-plan
+app.post('/api/generate-plan', async (req: Request, res: Response) => {
+  try {
+    const aiRes = await axios.post(`${AI_ENGINE_URL}/generate-plan`, req.body, { timeout: 10000 });
+    res.json(aiRes.data);
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: 'AI engine unavailable', fallback: true });
+  }
+});
+
+// POST /api/meal-suggestion
+app.post('/api/meal-suggestion', async (req: Request, res: Response) => {
+  try {
+    const aiRes = await axios.post(`${AI_ENGINE_URL}/meal-suggestions`, req.body, { timeout: 10000 });
+    res.json(aiRes.data);
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: 'AI engine unavailable', fallback: true });
+  }
+});
+
+// POST /api/adjust-plan
+app.post('/api/adjust-plan', async (req: Request, res: Response) => {
+  try {
+    const aiRes = await axios.post(`${AI_ENGINE_URL}/adjust-plan`, req.body, { timeout: 10000 });
+    res.json(aiRes.data);
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: 'AI engine unavailable', fallback: true });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
 
 // Health check endpoint
 app.get('/api/health', (req: Request, res: Response) => {
