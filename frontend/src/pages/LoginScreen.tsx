@@ -13,12 +13,10 @@ const LoginScreen: React.FC = () => {
   const [step, setStep] = useState<'language' | 'phone' | 'otp'>('language');
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
-  const [language, setLanguageState] = useState<'en' | 'ta' | 'hi'>('en');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   const handleLanguageSelect = (lang: 'en' | 'ta' | 'hi') => {
-    setLanguageState(lang);
     setLanguage(lang);
     setStep('phone');
   };
@@ -33,8 +31,9 @@ const LoginScreen: React.FC = () => {
       await apiClient.requestOTP(phone);
       setStep('otp');
       setError('');
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Failed to request OTP');
+    } catch (err: unknown) {
+      const e = err as { response?: { data?: { message?: string } } };
+      setError(e.response?.data?.message || 'Failed to request OTP');
     } finally {
       setLoading(false);
     }
@@ -51,20 +50,16 @@ const LoginScreen: React.FC = () => {
       setUser(response.data.user);
       apiClient.setToken(response.data.token);
       navigate('/onboarding');
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Invalid OTP');
+    } catch (err: unknown) {
+      const e = err as { response?: { data?: { message?: string } } };
+      setError(e.response?.data?.message || 'Invalid OTP');
     } finally {
       setLoading(false);
     }
   };
 
-  const handleGoogleLogin = async () => {
-    try {
-      // This would typically open Google OAuth dialog
-      setError('Google login coming soon');
-    } catch (err) {
-      setError('Google login failed');
-    }
+  const handleGoogleLogin = () => {
+    setError('Google login coming soon');
   };
 
   return (
@@ -92,13 +87,13 @@ const LoginScreen: React.FC = () => {
               </h2>
               <div className="space-y-3">
                 {[
-                  { code: 'en', label: '🇬🇧 English' },
-                  { code: 'hi', label: '🇮🇳 हिंदी' },
-                  { code: 'ta', label: '🇮🇳 தமிழ்' },
+                  { code: 'en' as const, label: '🇬🇧 English' },
+                  { code: 'hi' as const, label: '🇮🇳 हिंदी' },
+                  { code: 'ta' as const, label: '🇮🇳 தமிழ்' },
                 ].map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => handleLanguageSelect(lang.code as any)}
+                    onClick={() => handleLanguageSelect(lang.code)}
                     className="w-full p-4 border-2 border-gray-300 dark:border-slate-600 rounded-lg hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-slate-700 transition font-semibold text-gray-900 dark:text-white"
                   >
                     {lang.label}

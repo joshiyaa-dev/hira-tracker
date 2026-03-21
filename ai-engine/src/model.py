@@ -18,21 +18,71 @@ class FitnessModel:
         self.load_models()
     
     def load_models(self):
-        """Load pre-trained models or create new ones"""
-        # Load or initialize models
-        # In production, these would be trained on a larger dataset
+        """Load pre-trained models or train on synthetic data"""
         try:
             self.calorie_model = joblib.load(self.model_path / "calorie_model.pkl")
             self.protein_model = joblib.load(self.model_path / "protein_model.pkl")
             self.intensity_model = joblib.load(self.model_path / "intensity_model.pkl")
-        except:
-            self.initialize_models()
+        except Exception:
+            self._train_on_synthetic_data()
     
     def initialize_models(self):
-        """Initialize fresh models"""
-        self.calorie_model = RandomForestRegressor(n_estimators=100, random_state=42)
-        self.protein_model = RandomForestRegressor(n_estimators=100, random_state=42)
-        self.intensity_model = RandomForestRegressor(n_estimators=100, random_state=42)
+        """Initialize fresh (unfitted) models"""
+        self.calorie_model = RandomForestRegressor(n_estimators=50, random_state=42)
+        self.protein_model = RandomForestRegressor(n_estimators=50, random_state=42)
+        self.intensity_model = RandomForestRegressor(n_estimators=50, random_state=42)
+
+    def _train_on_synthetic_data(self):
+        """Train models on synthetic data derived from rule-based formulas."""
+        self.initialize_models()
+        rng = np.random.default_rng(42)
+        n = 500
+
+        ages = rng.integers(16, 60, n).astype(float)
+        weights = rng.uniform(45, 120, n)
+        heights = rng.uniform(150, 200, n)
+        genders = rng.integers(0, 2, n).astype(float)
+        body_types = rng.integers(0, 3, n).astype(float)
+        lifestyles = rng.integers(0, 3, n).astype(float)
+        experiences = rng.integers(0, 3, n).astype(float)
+        goals = rng.integers(0, 4, n).astype(float)
+
+        X = np.column_stack([ages, weights, heights, genders, body_types, lifestyles, experiences, goals])
+
+        # Build targets using rule-based formulas
+        calorie_targets = []
+        protein_targets = []
+        intensity_targets = []
+
+        factors_map = {0: 1.2, 1: 1.55, 2: 1.9}
+        protein_mult = {0: 2.0, 1: 2.2, 2: 1.8, 3: 1.6}
+
+        for i in range(n):
+            age, weight, height, gender, _, lifestyle, experience, goal = X[i]
+            if gender == 0:
+                bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
+            else:
+                bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)
+            factor = factors_map.get(int(lifestyle), 1.55)
+            calorie_targets.append(round(bmr * factor))
+
+            mult = protein_mult.get(int(goal), 1.6)
+            protein_targets.append(round(weight * mult))
+
+            if experience == 0:
+                intensity = 0.3
+            elif experience == 1:
+                intensity = 0.6
+            else:
+                intensity = 0.9
+            if lifestyle == 2:
+                intensity = min(1.0, intensity + 0.1)
+            intensity_targets.append(intensity)
+
+        self.calorie_model.fit(X, calorie_targets)
+        self.protein_model.fit(X, protein_targets)
+        self.intensity_model.fit(X, intensity_targets)
+        print("✅ AI models trained on synthetic data")
     
     def prepare_features(self, user_data: Dict[str, Any]) -> np.ndarray:
         """Prepare user data as features for model"""
@@ -84,33 +134,40 @@ class FitnessModel:
         return mapping.get(goal.lower(), 3)
     
     def predict_calories(self, user_data: Dict[str, Any]) -> float:
-        """P Predict daily calorie requirement"""
+        """Predict daily calorie requirement"""
         features = self.prepare_features(user_data)
-        if self.calorie_model is None:
-            # Rule-based fallback
-            return self._calculate_calorie_rule_based(user_data)
-        return float(self.calorie_model.predict(features)[0])
+        try:
+            if self.calorie_model is not None:
+                return float(self.calorie_model.predict(features)[0])
+        except Exception:
+            pass
+        return self._calculate_calorie_rule_based(user_data)
     
     def predict_protein(self, user_data: Dict[str, Any]) -> float:
         """Predict daily protein requirement (grams)"""
         features = self.prepare_features(user_data)
-        if self.protein_model is None:
-            return self._calculate_protein_rule_based(user_data)
-        return float(self.protein_model.predict(features)[0])
+        try:
+            if self.protein_model is not None:
+                return float(self.protein_model.predict(features)[0])
+        except Exception:
+            pass
+        return self._calculate_protein_rule_based(user_data)
     
     def predict_intensity(self, user_data: Dict[str, Any]) -> str:
         """Predict recommended intensity"""
         features = self.prepare_features(user_data)
-        if self.intensity_model is None:
-            return self._calculate_intensity_rule_based(user_data)
-        
-        prediction = float(self.intensity_model.predict(features)[0])
-        if prediction < 0.33:
-            return 'light'
-        elif prediction < 0.66:
-            return 'normal'
-        else:
-            return 'push'
+        try:
+            if self.intensity_model is not None:
+                prediction = float(self.intensity_model.predict(features)[0])
+                if prediction < 0.4:
+                    return 'light'
+                elif prediction < 0.7:
+                    return 'normal'
+                else:
+                    return 'push'
+        except Exception:
+            pass
+        return self._calculate_intensity_rule_based(user_data)
     
     @staticmethod
     def _calculate_calorie_rule_based(user_data: Dict[str, Any]) -> float:

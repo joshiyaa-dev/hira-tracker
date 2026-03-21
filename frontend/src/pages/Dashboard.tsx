@@ -9,10 +9,12 @@ import {
   Settings,
   LogOut,
   Menu,
+  ClipboardList,
 } from 'lucide-react';
 import { useAppStore } from '@/store/useAppStore';
 import { apiClient } from '@/services/api';
 import { ReadinessScore } from '@/types';
+import DailyCheckInModal from '@/components/DailyCheckInModal';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -23,8 +25,9 @@ const Dashboard: React.FC = () => {
   const setTodayWorkout = useAppStore((state) => state.setTodayWorkout);
 
   const [readiness, setReadiness] = useState<ReadinessScore | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
+  const [showCheckIn, setShowCheckIn] = useState(false);
 
   useEffect(() => {
     if (!user) {
@@ -204,7 +207,7 @@ const Dashboard: React.FC = () => {
         )}
 
         {/* Action Buttons */}
-        <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 sticky bottom-24">
+        <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 mb-4">
           <button
             onClick={() => navigate('/food')}
             className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-xl transition shadow-md"
@@ -218,6 +221,16 @@ const Dashboard: React.FC = () => {
             📈 Progress
           </button>
         </motion.div>
+
+        {/* Daily Check-in Button */}
+        <motion.button
+          variants={itemVariants}
+          onClick={() => setShowCheckIn(true)}
+          className="w-full flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition shadow-md mb-6"
+        >
+          <ClipboardList size={20} />
+          Daily Check-in
+        </motion.button>
       </motion.div>
 
       {/* Bottom Navigation */}
@@ -246,6 +259,12 @@ const Dashboard: React.FC = () => {
           </button>
         </div>
       </div>
+
+      {/* Daily Check-in Modal */}
+      <DailyCheckInModal
+        isOpen={showCheckIn}
+        onClose={() => setShowCheckIn(false)}
+      />
     </div>
   );
 };

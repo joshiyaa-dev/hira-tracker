@@ -1,9 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronLeft, Moon, LogOut, Lock, Bell, Globe } from 'lucide-react';
+import { ChevronLeft, Moon, LogOut, Lock, Bell, Globe, LucideIcon } from 'lucide-react';
 import { useAppStore } from '@/store/useAppStore';
 import { apiClient } from '@/services/api';
+
+type ToggleItem = {
+  label: string;
+  icon: LucideIcon;
+  isToggle: true;
+  value: boolean;
+  action?: () => void;
+};
+
+type ActionItem = {
+  label: string;
+  icon: LucideIcon;
+  isToggle?: false;
+  description?: string;
+  action?: () => void;
+};
+
+type SettingItem = ToggleItem | ActionItem;
+
+interface SettingsSection {
+  title: string;
+  items: SettingItem[];
+}
 
 const SettingsScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -19,7 +42,7 @@ const SettingsScreen: React.FC = () => {
     navigate('/login');
   };
 
-  const settingsSections = [
+  const settingsSections: SettingsSection[] = [
     {
       title: 'Display',
       items: [
@@ -39,7 +62,6 @@ const SettingsScreen: React.FC = () => {
           label: 'Select Language',
           icon: Globe,
           description: `Current: ${language === 'en' ? 'English' : language === 'hi' ? 'हिंदी' : 'தமிழ்'}`,
-          onClick: () => {},
         },
       ],
     },
@@ -115,7 +137,7 @@ const SettingsScreen: React.FC = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: sectionIndex * 0.1 + itemIndex * 0.05 }}
-                    onClick={item.action || (() => {})}
+                    onClick={item.action ?? (() => {})}
                     className="w-full card flex items-center justify-between hover:shadow-md transition"
                   >
                     <div className="flex items-center gap-3">
@@ -124,7 +146,7 @@ const SettingsScreen: React.FC = () => {
                         <p className="font-medium text-gray-900 dark:text-white">
                           {item.label}
                         </p>
-                        {item.description && (
+                        {!item.isToggle && item.description && (
                           <p className="text-xs text-gray-600 dark:text-gray-400">
                             {item.description}
                           </p>
@@ -163,13 +185,13 @@ const SettingsScreen: React.FC = () => {
           </h2>
           <div className="space-y-2">
             {[
-              { code: 'en', label: 'English', flag: '🇬🇧' },
-              { code: 'hi', label: 'हिंदी', flag: '🇮🇳' },
-              { code: 'ta', label: 'தமிழ்', flag: '🇮🇳' },
+              { code: 'en' as const, label: 'English', flag: '🇬🇧' },
+              { code: 'hi' as const, label: 'हिंदी', flag: '🇮🇳' },
+              { code: 'ta' as const, label: 'தமிழ்', flag: '🇮🇳' },
             ].map((lang) => (
               <button
                 key={lang.code}
-                onClick={() => setLanguage(lang.code as any)}
+                onClick={() => setLanguage(lang.code)}
                 className={`w-full card flex items-center gap-3 ${
                   language === lang.code ? 'bg-blue-50 dark:bg-blue-900 border-blue-500' : ''
                 }`}

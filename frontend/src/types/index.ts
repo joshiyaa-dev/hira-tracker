@@ -82,8 +82,8 @@ export interface DailyNutrition {
 
 // Health Metrics
 export interface DailyCheckIn {
-  id: string;
-  userId: string;
+  id?: string;
+  userId?: string;
   date: string;
   energy: number; // 1-10
   sleep: number; // hours

@@ -67,7 +67,7 @@ const ProgressScreen: React.FC = () => {
         >
           <h2 className="font-bold mb-4">This Week's Activity</h2>
           <div className="flex items-end justify-between h-40 gap-2">
-            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => {
+            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => {
               const height = Math.random() * 80 + 20;
               return (
                 <div key={day} className="flex-1 flex flex-col items-center">

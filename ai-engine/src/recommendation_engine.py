@@ -1,7 +1,11 @@
 import random
 from typing import Dict, List, Any
-from model import FitnessModel
-from data_loader import DataLoader
+try:
+    from src.model import FitnessModel
+    from src.data_loader import DataLoader
+except ImportError:
+    from model import FitnessModel  # type: ignore
+    from data_loader import DataLoader  # type: ignore
 
 class RecommendationEngine:
     """Main recommendation engine for HIRA"""

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check, AlertCircle, ChevronLeft } from 'lucide-react';
@@ -7,7 +7,6 @@ import { useAppStore } from '@/store/useAppStore';
 const WorkoutScreen: React.FC = () => {
   const navigate = useNavigate();
   const todayWorkout = useAppStore((state) => state.todayWorkout);
-  const user = useAppStore((state) => state.user);
   const [completedExercises, setCompletedExercises] = useState<string[]>(
     todayWorkout?.completedExercises || []
   );

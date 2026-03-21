@@ -8,7 +8,11 @@
     "sets": 4,
     "reps": 6,
     "rest_seconds": 90,
-    "safety_tips": ["Keep your back flat on the bench", "Lower the bar to your mid-chest", "Grip should be shoulder-width apart"]
+    "safety_tips": [
+      "Keep your back flat on the bench",
+      "Lower the bar to your mid-chest",
+      "Grip should be shoulder-width apart"
+    ]
   },
   {
     "id": "ex_002",
@@ -19,10 +23,29 @@
     "sets": 3,
     "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["Control the weight throughout", "Don't let dumbbells go too low", "Maintain slight elbow bend"]
+    "safety_tips": [
+      "Control the weight throughout",
+      "Don't let dumbbells go too low",
+      "Maintain slight elbow bend"
+    ]
   },
   {
     "id": "ex_003",
+    "name": "Incline Bench Press",
+    "muscle_group": "chest",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Set bench to 30-45 degree angle",
+      "Keep wrists straight",
+      "Don't flare elbows excessively"
+    ]
+  },
+  {
+    "id": "ex_004",
     "name": "Push-ups",
     "muscle_group": "chest",
     "difficulty": "beginner",
@@ -30,87 +53,375 @@
     "sets": 3,
     "reps": 15,
     "rest_seconds": 60,
-    "safety_tips": ["Keep your body straight", "Full range of motion", "Engage your core"]
+    "safety_tips": [
+      "Keep core tight",
+      "Don't let hips sag",
+      "Full range of motion"
+    ]
   },
   {
-    "id": "ex_004",
-    "name": "Incline Bench Press",
+    "id": "ex_005",
+    "name": "Cable Crossover",
+    "muscle_group": "chest",
+    "difficulty": "intermediate",
+    "equipment": "cable machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Maintain slight forward lean",
+      "Squeeze chest at peak contraction",
+      "Use controlled movements"
+    ]
+  },
+  {
+    "id": "ex_006",
+    "name": "Decline Bench Press",
     "muscle_group": "chest",
     "difficulty": "advanced",
     "equipment": "barbell",
     "sets": 4,
     "reps": 8,
     "rest_seconds": 90,
-    "safety_tips": ["45-degree angle incline", "Grip should be slightly wider", "Control the descent"]
+    "safety_tips": [
+      "Secure feet properly",
+      "Use a spotter",
+      "Lower bar to lower chest"
+    ]
   },
   {
-    "id": "ex_005",
-    "name": "Deadlift",
+    "id": "ex_007",
+    "name": "Chest Dips",
+    "muscle_group": "chest",
+    "difficulty": "intermediate",
+    "equipment": "dip bars",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Lean forward slightly to target chest",
+      "Don't go too low if shoulders hurt",
+      "Control the descent"
+    ]
+  },
+  {
+    "id": "ex_008",
+    "name": "Pec Deck Machine",
+    "muscle_group": "chest",
+    "difficulty": "beginner",
+    "equipment": "pec deck machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Set seat height correctly",
+      "Keep elbows slightly bent",
+      "Squeeze at contraction point"
+    ]
+  },
+  {
+    "id": "ex_009",
+    "name": "Pull-ups",
     "muscle_group": "back",
-    "difficulty": "advanced",
-    "equipment": "barbell",
+    "difficulty": "intermediate",
+    "equipment": "pull-up bar",
     "sets": 4,
-    "reps": 5,
-    "rest_seconds": 120,
-    "safety_tips": ["Keep your back straight", "Engage your legs", "Drive through heels"]
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Dead hang at bottom",
+      "Pull until chin clears bar",
+      "Don't swing or kip"
+    ]
   },
   {
-    "id": "ex_006",
-    "name": "Barbell Rows",
+    "id": "ex_010",
+    "name": "Barbell Row",
     "muscle_group": "back",
     "difficulty": "intermediate",
     "equipment": "barbell",
     "sets": 4,
     "reps": 8,
     "rest_seconds": 90,
-    "safety_tips": ["Slight bend in knees", "Keep chest up", "Pull towards your lower chest"]
+    "safety_tips": [
+      "Keep back flat, no rounding",
+      "Pull to your lower chest",
+      "Hinge at hips properly"
+    ]
   },
   {
-    "id": "ex_007",
-    "name": "Lat Pulldowns",
+    "id": "ex_011",
+    "name": "Lat Pulldown",
+    "muscle_group": "back",
+    "difficulty": "beginner",
+    "equipment": "lat pulldown machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Use full range of motion",
+      "Pull to upper chest",
+      "Avoid pulling behind neck"
+    ]
+  },
+  {
+    "id": "ex_012",
+    "name": "Seated Cable Row",
     "muscle_group": "back",
     "difficulty": "beginner",
     "equipment": "cable machine",
     "sets": 3,
     "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["Full range of motion", "Keep chest up", "Pull elbows down and back"]
+    "safety_tips": [
+      "Keep torso upright",
+      "Pull elbows back fully",
+      "Avoid using momentum"
+    ]
   },
   {
-    "id": "ex_008",
-    "name": "T-Bar Rows",
+    "id": "ex_013",
+    "name": "Deadlift",
+    "muscle_group": "back",
+    "difficulty": "advanced",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 5,
+    "rest_seconds": 180,
+    "safety_tips": [
+      "Neutral spine throughout",
+      "Bar close to body",
+      "Drive through heels",
+      "Breathe properly"
+    ]
+  },
+  {
+    "id": "ex_014",
+    "name": "T-Bar Row",
     "muscle_group": "back",
     "difficulty": "intermediate",
-    "equipment": "t-bar machine",
-    "sets": 3,
-    "reps": 10,
-    "rest_seconds": 75,
-    "safety_tips": ["Keep knees bent", "Drive with your legs", "Squeeze shoulder blades"]
+    "equipment": "t-bar row machine",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Chest on pad",
+      "Keep head neutral",
+      "Full stretch at bottom"
+    ]
   },
   {
-    "id": "ex_009",
-    "name": "Dumbbell Rows",
+    "id": "ex_015",
+    "name": "Single Arm Dumbbell Row",
     "muscle_group": "back",
     "difficulty": "beginner",
     "equipment": "dumbbells",
     "sets": 3,
     "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["One knee on bench", "Pull elbow past torso", "Squeeze upper back"]
+    "safety_tips": [
+      "Support with free hand on bench",
+      "Elbow close to body",
+      "Full range of motion"
+    ]
   },
   {
-    "id": "ex_010",
-    "name": "Shoulder Press",
+    "id": "ex_016",
+    "name": "Hyperextensions",
+    "muscle_group": "back",
+    "difficulty": "beginner",
+    "equipment": "hyperextension bench",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Don't hyperextend spine",
+      "Focus on lower back",
+      "Control the movement"
+    ]
+  },
+  {
+    "id": "ex_017",
+    "name": "Barbell Squat",
+    "muscle_group": "legs",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 120,
+    "safety_tips": [
+      "Knees track over toes",
+      "Go to at least parallel",
+      "Keep chest up and back straight"
+    ]
+  },
+  {
+    "id": "ex_018",
+    "name": "Leg Press",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "leg press machine",
+    "sets": 4,
+    "reps": 10,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Don't lock knees fully",
+      "Feet shoulder-width on platform",
+      "Full range of motion"
+    ]
+  },
+  {
+    "id": "ex_019",
+    "name": "Lunges",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Keep front knee behind toes",
+      "Back knee nearly touches ground",
+      "Maintain upright posture"
+    ]
+  },
+  {
+    "id": "ex_020",
+    "name": "Romanian Deadlift",
+    "muscle_group": "legs",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Feel stretch in hamstrings",
+      "Bar close to legs",
+      "Don't round lower back"
+    ]
+  },
+  {
+    "id": "ex_021",
+    "name": "Leg Extension",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "leg extension machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Don't lock out knee",
+      "Controlled descent",
+      "Squeeze quads at top"
+    ]
+  },
+  {
+    "id": "ex_022",
+    "name": "Leg Curl",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "leg curl machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Don't use momentum",
+      "Full range of motion",
+      "Squeeze hamstrings at top"
+    ]
+  },
+  {
+    "id": "ex_023",
+    "name": "Calf Raises",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "calf raise machine",
+    "sets": 4,
+    "reps": 15,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Full range \u2013 stretch at bottom",
+      "Hold at top for 1 second",
+      "Don't bounce"
+    ]
+  },
+  {
+    "id": "ex_024",
+    "name": "Hack Squat",
+    "muscle_group": "legs",
+    "difficulty": "intermediate",
+    "equipment": "hack squat machine",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Don't round lower back",
+      "Keep heels flat on platform",
+      "Control the descent"
+    ]
+  },
+  {
+    "id": "ex_025",
+    "name": "Bulgarian Split Squat",
+    "muscle_group": "legs",
+    "difficulty": "advanced",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Rear foot elevated on bench",
+      "Front knee tracks over toes",
+      "Keep torso upright"
+    ]
+  },
+  {
+    "id": "ex_026",
+    "name": "Sumo Squat",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Wide stance, toes pointing out",
+      "Sit deep into squat",
+      "Keep back straight"
+    ]
+  },
+  {
+    "id": "ex_027",
+    "name": "Box Jump",
+    "muscle_group": "legs",
+    "difficulty": "intermediate",
+    "equipment": "plyo box",
+    "sets": 3,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Land softly with bent knees",
+      "Step down carefully",
+      "Start with lower box height"
+    ]
+  },
+  {
+    "id": "ex_028",
+    "name": "Overhead Press",
     "muscle_group": "shoulders",
     "difficulty": "intermediate",
     "equipment": "barbell",
     "sets": 4,
     "reps": 8,
     "rest_seconds": 90,
-    "safety_tips": ["Keep core tight", "Full range of motion", "Slightly in front of head"]
+    "safety_tips": [
+      "Keep core braced",
+      "Press straight up",
+      "Don't lean back excessively"
+    ]
   },
   {
-    "id": "ex_011",
+    "id": "ex_029",
     "name": "Lateral Raises",
     "muscle_group": "shoulders",
     "difficulty": "beginner",
@@ -118,105 +429,550 @@
     "sets": 3,
     "reps": 15,
     "rest_seconds": 60,
-    "safety_tips": ["Control the weight", "Slight bend in elbows", "Raise until parallel to ground"]
+    "safety_tips": [
+      "Raise to shoulder height",
+      "Slight bend in elbows",
+      "Don't use momentum"
+    ]
   },
   {
-    "id": "ex_012",
-    "name": "Machine Shoulder Press",
+    "id": "ex_030",
+    "name": "Front Raises",
     "muscle_group": "shoulders",
     "difficulty": "beginner",
-    "equipment": "machine",
+    "equipment": "dumbbells",
     "sets": 3,
     "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["Use controlled motion", "Full range", "Adjust seat height"]
+    "safety_tips": [
+      "Raise to eye level",
+      "Controlled movement",
+      "Keep core stable"
+    ]
   },
   {
-    "id": "ex_013",
-    "name": "Squats",
-    "muscle_group": "legs",
+    "id": "ex_031",
+    "name": "Arnold Press",
+    "muscle_group": "shoulders",
     "difficulty": "intermediate",
-    "equipment": "barbell",
-    "sets": 4,
-    "reps": 6,
-    "rest_seconds": 120,
-    "safety_tips": ["Feet shoulder-width apart", "Keep chest up", "Drive through heels"]
-  },
-  {
-    "id": "ex_014",
-    "name": "Leg Press",
-    "muscle_group": "legs",
-    "difficulty": "beginner",
-    "equipment": "machine",
+    "equipment": "dumbbells",
     "sets": 3,
-    "reps": 12,
+    "reps": 10,
     "rest_seconds": 75,
-    "safety_tips": ["Full range of motion", "Keep knees tracking over toes", "Don't lock knees at top"]
+    "safety_tips": [
+      "Full rotation during press",
+      "Don't go too heavy",
+      "Keep elbows from flaring"
+    ]
   },
   {
-    "id": "ex_015",
-    "name": "Leg Curls",
-    "muscle_group": "legs",
+    "id": "ex_032",
+    "name": "Face Pulls",
+    "muscle_group": "shoulders",
     "difficulty": "beginner",
-    "equipment": "machine",
-    "sets": 3,
-    "reps": 12,
-    "rest_seconds": 60,
-    "safety_tips": ["Control on the way down", "Squeeze hamstrings", "Full range"]
-  },
-  {
-    "id": "ex_016",
-    "name": "Goblet Squats",
-    "muscle_group": "legs",
-    "difficulty": "beginner",
-    "equipment": "dumbbell",
+    "equipment": "cable machine",
     "sets": 3,
     "reps": 15,
-    "rest_seconds": 60,
-    "safety_tips": ["Chest up", "Full depth", "Knees over toes"]
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Pull to face level",
+      "External rotation at peak",
+      "Use light weight"
+    ]
   },
   {
-    "id": "ex_017",
-    "name": "Barbell Curls",
-    "muscle_group": "arms",
-    "difficulty": "beginner",
+    "id": "ex_033",
+    "name": "Upright Row",
+    "muscle_group": "shoulders",
+    "difficulty": "intermediate",
     "equipment": "barbell",
     "sets": 3,
     "reps": 10,
     "rest_seconds": 60,
-    "safety_tips": ["No swinging", "Full range of motion", "Elbows tight to body"]
+    "safety_tips": [
+      "Elbows higher than wrists",
+      "Bar close to body",
+      "Stop at chin level"
+    ]
   },
   {
-    "id": "ex_018",
-    "name": "Dumbbell Curls",
+    "id": "ex_034",
+    "name": "Seated Dumbbell Press",
+    "muscle_group": "shoulders",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 4,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Back supported",
+      "Full range of motion",
+      "Controlled movement"
+    ]
+  },
+  {
+    "id": "ex_035",
+    "name": "Barbell Curl",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Don't swing body",
+      "Keep elbows at sides",
+      "Full range of motion"
+    ]
+  },
+  {
+    "id": "ex_036",
+    "name": "Dumbbell Curl",
     "muscle_group": "arms",
     "difficulty": "beginner",
     "equipment": "dumbbells",
     "sets": 3,
     "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["Control the movement", "Supinate at the top", "Compact movements"]
+    "safety_tips": [
+      "Supinate wrist at top",
+      "Keep upper arm stationary",
+      "Control the descent"
+    ]
   },
   {
-    "id": "ex_019",
-    "name": "Tricep Dips",
+    "id": "ex_037",
+    "name": "Hammer Curl",
     "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Neutral grip throughout",
+      "Keep elbows at sides",
+      "Don't swing"
+    ]
+  },
+  {
+    "id": "ex_038",
+    "name": "Tricep Pushdown",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "cable machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Keep elbows at sides",
+      "Extend fully",
+      "Control the return"
+    ]
+  },
+  {
+    "id": "ex_039",
+    "name": "Skull Crushers",
+    "muscle_group": "arms",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Lower to forehead carefully",
+      "Keep elbows in",
+      "Use spotter for heavy weights"
+    ]
+  },
+  {
+    "id": "ex_040",
+    "name": "Overhead Tricep Extension",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Keep elbows close to head",
+      "Full range of motion",
+      "Don't arch back"
+    ]
+  },
+  {
+    "id": "ex_041",
+    "name": "Concentration Curl",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Elbow rests on inner thigh",
+      "Isolate the bicep",
+      "Full contraction at top"
+    ]
+  },
+  {
+    "id": "ex_042",
+    "name": "Close Grip Bench Press",
+    "muscle_group": "arms",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Grip shoulder-width apart",
+      "Keep elbows close to body",
+      "Lower to lower chest"
+    ]
+  },
+  {
+    "id": "ex_043",
+    "name": "Preacher Curl",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "preacher bench",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Arms fully on pad",
+      "Don't hyperextend at bottom",
+      "Full contraction at top"
+    ]
+  },
+  {
+    "id": "ex_044",
+    "name": "Crunches",
+    "muscle_group": "core",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 20,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Don't pull on neck",
+      "Exhale on the way up",
+      "Keep lower back on floor"
+    ]
+  },
+  {
+    "id": "ex_045",
+    "name": "Plank",
+    "muscle_group": "core",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 60,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Keep body in straight line",
+      "Don't let hips sag",
+      "Breathe steadily"
+    ]
+  },
+  {
+    "id": "ex_046",
+    "name": "Leg Raises",
+    "muscle_group": "core",
     "difficulty": "intermediate",
     "equipment": "bodyweight",
     "sets": 3,
-    "reps": 10,
+    "reps": 12,
     "rest_seconds": 60,
-    "safety_tips": ["Upright posture", "Elbows in", "Full range of motion"]
+    "safety_tips": [
+      "Keep lower back flat",
+      "Lower legs slowly",
+      "Don't use momentum"
+    ]
   },
   {
-    "id": "ex_020",
-    "name": "Rope Pushdowns",
-    "muscle_group": "arms",
+    "id": "ex_047",
+    "name": "Russian Twist",
+    "muscle_group": "core",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 20,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Keep back straight",
+      "Rotate from core",
+      "Feet can be raised"
+    ]
+  },
+  {
+    "id": "ex_048",
+    "name": "Cable Crunch",
+    "muscle_group": "core",
     "difficulty": "beginner",
     "equipment": "cable machine",
     "sets": 3,
     "reps": 15,
     "rest_seconds": 45,
-    "safety_tips": ["Keep elbows stationary", "Full extension", "Control the return"]
+    "safety_tips": [
+      "Focus on contraction",
+      "Don't use hip flexors",
+      "Hold crunch briefly"
+    ]
+  },
+  {
+    "id": "ex_049",
+    "name": "Ab Wheel Rollout",
+    "muscle_group": "core",
+    "difficulty": "advanced",
+    "equipment": "ab wheel",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Keep core braced",
+      "Don't let lower back arch",
+      "Start with partial range"
+    ]
+  },
+  {
+    "id": "ex_050",
+    "name": "Side Plank",
+    "muscle_group": "core",
+    "difficulty": "intermediate",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 45,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Keep body in straight line",
+      "Don't let hips drop",
+      "Focus on obliques"
+    ]
+  },
+  {
+    "id": "ex_051",
+    "name": "Burpees",
+    "muscle_group": "full_body",
+    "difficulty": "intermediate",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": [
+      "Land softly on jump",
+      "Full push-up at bottom",
+      "Maintain good form throughout"
+    ]
+  },
+  {
+    "id": "ex_052",
+    "name": "Kettlebell Swing",
+    "muscle_group": "full_body",
+    "difficulty": "intermediate",
+    "equipment": "kettlebell",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Hinge at hips not squat",
+      "Keep back flat",
+      "Drive with hips not arms"
+    ]
+  },
+  {
+    "id": "ex_053",
+    "name": "Clean and Press",
+    "muscle_group": "full_body",
+    "difficulty": "advanced",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 6,
+    "rest_seconds": 120,
+    "safety_tips": [
+      "Learn technique first",
+      "Use bumper plates",
+      "Keep core braced throughout"
+    ]
+  },
+  {
+    "id": "ex_054",
+    "name": "Farmers Walk",
+    "muscle_group": "full_body",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 30,
+    "rest_seconds": 90,
+    "safety_tips": [
+      "Keep shoulders back",
+      "Walk in straight line",
+      "Maintain neutral spine"
+    ]
+  },
+  {
+    "id": "ex_055",
+    "name": "Jumping Jacks",
+    "muscle_group": "cardio",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 30,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Land softly",
+      "Keep knees slightly bent",
+      "Maintain rhythm"
+    ]
+  },
+  {
+    "id": "ex_056",
+    "name": "Mountain Climbers",
+    "muscle_group": "cardio",
+    "difficulty": "intermediate",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 20,
+    "rest_seconds": 45,
+    "safety_tips": [
+      "Keep hips level",
+      "Core tight throughout",
+      "Controlled pace"
+    ]
+  },
+  {
+    "id": "ex_057",
+    "name": "High Knees",
+    "muscle_group": "cardio",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 30,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Lift knees to hip height",
+      "Use arms for momentum",
+      "Land on balls of feet"
+    ]
+  },
+  {
+    "id": "ex_058",
+    "name": "Jump Rope",
+    "muscle_group": "cardio",
+    "difficulty": "beginner",
+    "equipment": "jump rope",
+    "sets": 3,
+    "reps": 60,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Land on balls of feet",
+      "Keep jumps low",
+      "Maintain rhythm"
+    ]
+  },
+  {
+    "id": "ex_059",
+    "name": "Battle Ropes",
+    "muscle_group": "cardio",
+    "difficulty": "intermediate",
+    "equipment": "battle ropes",
+    "sets": 3,
+    "reps": 30,
+    "rest_seconds": 60,
+    "safety_tips": [
+      "Keep back straight",
+      "Bend knees slightly",
+      "Use full arm motion"
+    ]
+  },
+  {
+    "id": "ex_060",
+    "name": "Cat-Cow Stretch",
+    "muscle_group": "recovery",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 2,
+    "reps": 10,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Move slowly and controlled",
+      "Breathe with movement",
+      "Don't force range of motion"
+    ]
+  },
+  {
+    "id": "ex_061",
+    "name": "Hip Flexor Stretch",
+    "muscle_group": "recovery",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 2,
+    "reps": 30,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Hold for 30 seconds",
+      "Feel stretch in front of hip",
+      "Don't arch back excessively"
+    ]
+  },
+  {
+    "id": "ex_062",
+    "name": "Foam Rolling",
+    "muscle_group": "recovery",
+    "difficulty": "beginner",
+    "equipment": "foam roller",
+    "sets": 1,
+    "reps": 60,
+    "rest_seconds": 0,
+    "safety_tips": [
+      "Roll slowly",
+      "Pause on tight spots",
+      "Avoid rolling on joints"
+    ]
+  },
+  {
+    "id": "ex_063",
+    "name": "Child's Pose",
+    "muscle_group": "recovery",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 2,
+    "reps": 45,
+    "rest_seconds": 15,
+    "safety_tips": [
+      "Arms extended forward",
+      "Breathe deeply",
+      "Relax shoulders completely"
+    ]
+  },
+  {
+    "id": "ex_064",
+    "name": "Pigeon Pose",
+    "muscle_group": "recovery",
+    "difficulty": "intermediate",
+    "equipment": "bodyweight",
+    "sets": 2,
+    "reps": 45,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Don't force hip down",
+      "Support with hands",
+      "Hold for 30-60 seconds"
+    ]
+  },
+  {
+    "id": "ex_065",
+    "name": "World's Greatest Stretch",
+    "muscle_group": "recovery",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 2,
+    "reps": 8,
+    "rest_seconds": 30,
+    "safety_tips": [
+      "Move through full range",
+      "Breathe into stretch",
+      "Don't rush"
+    ]
   }
 ]
