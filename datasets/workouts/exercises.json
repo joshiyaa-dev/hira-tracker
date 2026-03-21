@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ex_001",
+    "name": "Bench Press",
+    "muscle_group": "chest",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 6,
+    "rest_seconds": 90,
+    "safety_tips": ["Keep your back flat on the bench", "Lower the bar to your mid-chest", "Grip should be shoulder-width apart"]
+  },
+  {
+    "id": "ex_002",
+    "name": "Dumbbell Flyes",
+    "muscle_group": "chest",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["Control the weight throughout", "Don't let dumbbells go too low", "Maintain slight elbow bend"]
+  },
+  {
+    "id": "ex_003",
+    "name": "Push-ups",
+    "muscle_group": "chest",
+    "difficulty": "beginner",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 60,
+    "safety_tips": ["Keep your body straight", "Full range of motion", "Engage your core"]
+  },
+  {
+    "id": "ex_004",
+    "name": "Incline Bench Press",
+    "muscle_group": "chest",
+    "difficulty": "advanced",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": ["45-degree angle incline", "Grip should be slightly wider", "Control the descent"]
+  },
+  {
+    "id": "ex_005",
+    "name": "Deadlift",
+    "muscle_group": "back",
+    "difficulty": "advanced",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 5,
+    "rest_seconds": 120,
+    "safety_tips": ["Keep your back straight", "Engage your legs", "Drive through heels"]
+  },
+  {
+    "id": "ex_006",
+    "name": "Barbell Rows",
+    "muscle_group": "back",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": ["Slight bend in knees", "Keep chest up", "Pull towards your lower chest"]
+  },
+  {
+    "id": "ex_007",
+    "name": "Lat Pulldowns",
+    "muscle_group": "back",
+    "difficulty": "beginner",
+    "equipment": "cable machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["Full range of motion", "Keep chest up", "Pull elbows down and back"]
+  },
+  {
+    "id": "ex_008",
+    "name": "T-Bar Rows",
+    "muscle_group": "back",
+    "difficulty": "intermediate",
+    "equipment": "t-bar machine",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 75,
+    "safety_tips": ["Keep knees bent", "Drive with your legs", "Squeeze shoulder blades"]
+  },
+  {
+    "id": "ex_009",
+    "name": "Dumbbell Rows",
+    "muscle_group": "back",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["One knee on bench", "Pull elbow past torso", "Squeeze upper back"]
+  },
+  {
+    "id": "ex_010",
+    "name": "Shoulder Press",
+    "muscle_group": "shoulders",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 8,
+    "rest_seconds": 90,
+    "safety_tips": ["Keep core tight", "Full range of motion", "Slightly in front of head"]
+  },
+  {
+    "id": "ex_011",
+    "name": "Lateral Raises",
+    "muscle_group": "shoulders",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 60,
+    "safety_tips": ["Control the weight", "Slight bend in elbows", "Raise until parallel to ground"]
+  },
+  {
+    "id": "ex_012",
+    "name": "Machine Shoulder Press",
+    "muscle_group": "shoulders",
+    "difficulty": "beginner",
+    "equipment": "machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["Use controlled motion", "Full range", "Adjust seat height"]
+  },
+  {
+    "id": "ex_013",
+    "name": "Squats",
+    "muscle_group": "legs",
+    "difficulty": "intermediate",
+    "equipment": "barbell",
+    "sets": 4,
+    "reps": 6,
+    "rest_seconds": 120,
+    "safety_tips": ["Feet shoulder-width apart", "Keep chest up", "Drive through heels"]
+  },
+  {
+    "id": "ex_014",
+    "name": "Leg Press",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 75,
+    "safety_tips": ["Full range of motion", "Keep knees tracking over toes", "Don't lock knees at top"]
+  },
+  {
+    "id": "ex_015",
+    "name": "Leg Curls",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "machine",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["Control on the way down", "Squeeze hamstrings", "Full range"]
+  },
+  {
+    "id": "ex_016",
+    "name": "Goblet Squats",
+    "muscle_group": "legs",
+    "difficulty": "beginner",
+    "equipment": "dumbbell",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 60,
+    "safety_tips": ["Chest up", "Full depth", "Knees over toes"]
+  },
+  {
+    "id": "ex_017",
+    "name": "Barbell Curls",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "barbell",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 60,
+    "safety_tips": ["No swinging", "Full range of motion", "Elbows tight to body"]
+  },
+  {
+    "id": "ex_018",
+    "name": "Dumbbell Curls",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "dumbbells",
+    "sets": 3,
+    "reps": 12,
+    "rest_seconds": 60,
+    "safety_tips": ["Control the movement", "Supinate at the top", "Compact movements"]
+  },
+  {
+    "id": "ex_019",
+    "name": "Tricep Dips",
+    "muscle_group": "arms",
+    "difficulty": "intermediate",
+    "equipment": "bodyweight",
+    "sets": 3,
+    "reps": 10,
+    "rest_seconds": 60,
+    "safety_tips": ["Upright posture", "Elbows in", "Full range of motion"]
+  },
+  {
+    "id": "ex_020",
+    "name": "Rope Pushdowns",
+    "muscle_group": "arms",
+    "difficulty": "beginner",
+    "equipment": "cable machine",
+    "sets": 3,
+    "reps": 15,
+    "rest_seconds": 45,
+    "safety_tips": ["Keep elbows stationary", "Full extension", "Control the return"]
+  }
+]
