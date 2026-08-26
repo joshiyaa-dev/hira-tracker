@@ -1,0 +1,1616 @@
+{
+ "meta": {
+  "generated_by": "scripts/generate-meals.mjs",
+  "count": 73,
+  "note": "Approximate nutrition for general education only. Values vary by recipe and portion. Not medical or dietary advice."
+ },
+ "meals": [
+  {
+   "id": "meal-001",
+   "name": "Idli (3) with sambar",
+   "slot": "breakfast",
+   "kcal": 250,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-002",
+   "name": "Plain dosa (2)",
+   "slot": "breakfast",
+   "kcal": 280,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-003",
+   "name": "Masala dosa",
+   "slot": "breakfast",
+   "kcal": 385,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-004",
+   "name": "Pongal with ghee",
+   "slot": "breakfast",
+   "kcal": 340,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-005",
+   "name": "Upma",
+   "slot": "breakfast",
+   "kcal": 290,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "nuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-006",
+   "name": "Poha",
+   "slot": "breakfast",
+   "kcal": 270,
+   "protein_g": 6,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-007",
+   "name": "Rava kesari (small)",
+   "slot": "breakfast",
+   "kcal": 300,
+   "protein_g": 4,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-008",
+   "name": "Medu vada (2)",
+   "slot": "breakfast",
+   "kcal": 330,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-009",
+   "name": "Boiled egg (2) + toast",
+   "slot": "breakfast",
+   "kcal": 300,
+   "protein_g": 16,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg",
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie",
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-010",
+   "name": "Omelette (2)",
+   "slot": "breakfast",
+   "kcal": 220,
+   "protein_g": 14,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie",
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-011",
+   "name": "Bread butter jam",
+   "slot": "breakfast",
+   "kcal": 310,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-012",
+   "name": "Corn flakes + milk",
+   "slot": "breakfast",
+   "kcal": 260,
+   "protein_g": 11,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-013",
+   "name": "Oats porridge with banana",
+   "slot": "breakfast",
+   "kcal": 290,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-014",
+   "name": "Wheat puttu with kadala curry",
+   "slot": "breakfast",
+   "kcal": 380,
+   "protein_g": 13,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-015",
+   "name": "Chapati (2) with curd",
+   "slot": "breakfast",
+   "kcal": 320,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-016",
+   "name": "Banana milkshake",
+   "slot": "breakfast",
+   "kcal": 280,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-017",
+   "name": "Sprout salad",
+   "slot": "breakfast",
+   "kcal": 180,
+   "protein_g": 11,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-018",
+   "name": "Peanut chikki bar",
+   "slot": "breakfast",
+   "kcal": 210,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "peanuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-019",
+   "name": "Ragi kanji",
+   "slot": "breakfast",
+   "kcal": 190,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-020",
+   "name": "Veg sandwich grilled",
+   "slot": "breakfast",
+   "kcal": 330,
+   "protein_g": 10,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten",
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-021",
+   "name": "Paneer paratha (1)",
+   "slot": "breakfast",
+   "kcal": 350,
+   "protein_g": 14,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-022",
+   "name": "Egg bhurji + chapati",
+   "slot": "breakfast",
+   "kcal": 360,
+   "protein_g": 18,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg",
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-023",
+   "name": "Semiya upma",
+   "slot": "breakfast",
+   "kcal": 280,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-024",
+   "name": "Appam with coconut milk",
+   "slot": "breakfast",
+   "kcal": 300,
+   "protein_g": 6,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-025",
+   "name": "Sambar rice",
+   "slot": "lunch",
+   "kcal": 420,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-026",
+   "name": "Curd rice with pickle",
+   "slot": "lunch",
+   "kcal": 380,
+   "protein_g": 11,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-027",
+   "name": "Rasam rice",
+   "slot": "lunch",
+   "kcal": 360,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-028",
+   "name": "Lemon rice",
+   "slot": "lunch",
+   "kcal": 400,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "peanuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-029",
+   "name": "Biryani (veg)",
+   "slot": "lunch",
+   "kcal": 520,
+   "protein_g": 13,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-030",
+   "name": "Chicken biryani",
+   "slot": "lunch",
+   "kcal": 650,
+   "protein_g": 28,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-031",
+   "name": "Chapati (3) + dal + sabzi",
+   "slot": "lunch",
+   "kcal": 480,
+   "protein_g": 17,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-032",
+   "name": "Rice + chicken curry",
+   "slot": "lunch",
+   "kcal": 560,
+   "protein_g": 30,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-033",
+   "name": "Rice + fish curry",
+   "slot": "lunch",
+   "kcal": 500,
+   "protein_g": 27,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "fish"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-034",
+   "name": "Rice + egg curry",
+   "slot": "lunch",
+   "kcal": 480,
+   "protein_g": 22,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-035",
+   "name": "Curd rice + appalam",
+   "slot": "lunch",
+   "kcal": 410,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-036",
+   "name": "Tomato rice",
+   "slot": "lunch",
+   "kcal": 390,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "peanuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-037",
+   "name": "Curd rice + veg poriyal",
+   "slot": "lunch",
+   "kcal": 430,
+   "protein_g": 13,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-038",
+   "name": "Parotta + salna",
+   "slot": "lunch",
+   "kcal": 560,
+   "protein_g": 15,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-039",
+   "name": "Fried rice (veg)",
+   "slot": "lunch",
+   "kcal": 510,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "soy"
+   ],
+   "goals": [
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-040",
+   "name": "Paneer butter masala + naan",
+   "slot": "lunch",
+   "kcal": 640,
+   "protein_g": 20,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-041",
+   "name": "Fish fry + rice",
+   "slot": "lunch",
+   "kcal": 520,
+   "protein_g": 30,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "fish"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-042",
+   "name": "Kichadi (moong dal rice)",
+   "slot": "lunch",
+   "kcal": 420,
+   "protein_g": 16,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-043",
+   "name": "Sambar + idli (4)",
+   "slot": "lunch",
+   "kcal": 450,
+   "protein_g": 14,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-044",
+   "name": "Chapati (2) + dal",
+   "slot": "dinner",
+   "kcal": 380,
+   "protein_g": 14,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-045",
+   "name": "Idli (3) + chutney",
+   "slot": "dinner",
+   "kcal": 240,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-046",
+   "name": "Dosa (2) + chutney",
+   "slot": "dinner",
+   "kcal": 300,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-047",
+   "name": "Wheat dosa",
+   "slot": "dinner",
+   "kcal": 290,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-048",
+   "name": "Rice + rasam + poriyal",
+   "slot": "dinner",
+   "kcal": 400,
+   "protein_g": 10,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-049",
+   "name": "Phulka (3) + sabzi",
+   "slot": "dinner",
+   "kcal": 400,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-050",
+   "name": "Grilled chicken (150g) + salad",
+   "slot": "dinner",
+   "kcal": 380,
+   "protein_g": 35,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-051",
+   "name": "Fish curry + chapati",
+   "slot": "dinner",
+   "kcal": 470,
+   "protein_g": 26,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "fish",
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-052",
+   "name": "Egg curry + 2 chapati",
+   "slot": "dinner",
+   "kcal": 460,
+   "protein_g": 21,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg",
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "high-protein"
+   ]
+  },
+  {
+   "id": "meal-053",
+   "name": "Paneer tikka (dry)",
+   "slot": "dinner",
+   "kcal": 320,
+   "protein_g": 19,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-054",
+   "name": "Moong soup + toast",
+   "slot": "dinner",
+   "kcal": 250,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie",
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-055",
+   "name": "Vegetable clear soup + fruit",
+   "slot": "dinner",
+   "kcal": 180,
+   "protein_g": 5,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-056",
+   "name": "Curd rice (light)",
+   "slot": "dinner",
+   "kcal": 300,
+   "protein_g": 10,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-057",
+   "name": "Ragi dosa (2)",
+   "slot": "dinner",
+   "kcal": 260,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-058",
+   "name": "Oats upma",
+   "slot": "dinner",
+   "kcal": 270,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-059",
+   "name": "Khichdi with veggies",
+   "slot": "dinner",
+   "kcal": 390,
+   "protein_g": 14,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-060",
+   "name": "Roti + palak paneer",
+   "slot": "dinner",
+   "kcal": 450,
+   "protein_g": 18,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "gluten"
+   ],
+   "goals": [
+    "muscle-gain",
+    "general-health"
+   ],
+   "tags": [
+    "protein-moderate"
+   ]
+  },
+  {
+   "id": "meal-061",
+   "name": "Chapati roll (veg)",
+   "slot": "dinner",
+   "kcal": 350,
+   "protein_g": 11,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "gluten"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": []
+  },
+  {
+   "id": "meal-062",
+   "name": "Banana",
+   "slot": "snack",
+   "kcal": 105,
+   "protein_g": 1,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-063",
+   "name": "Apple",
+   "slot": "snack",
+   "kcal": 95,
+   "protein_g": 0,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-064",
+   "name": "Handful of peanuts",
+   "slot": "snack",
+   "kcal": 160,
+   "protein_g": 7,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "peanuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-065",
+   "name": "Roasted chana",
+   "slot": "snack",
+   "kcal": 160,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-066",
+   "name": "Buttermilk",
+   "slot": "snack",
+   "kcal": 60,
+   "protein_g": 3,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-067",
+   "name": "Filter coffee (with milk+sugar)",
+   "slot": "snack",
+   "kcal": 90,
+   "protein_g": 2,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-068",
+   "name": "Tea with milk",
+   "slot": "snack",
+   "kcal": 70,
+   "protein_g": 2,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-069",
+   "name": "Boiled egg",
+   "slot": "snack",
+   "kcal": 78,
+   "protein_g": 6,
+   "vegetarian": false,
+   "diets": [
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "egg"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-070",
+   "name": "Sundal (chickpea)",
+   "slot": "snack",
+   "kcal": 190,
+   "protein_g": 9,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-071",
+   "name": "Murmura puffed rice",
+   "slot": "snack",
+   "kcal": 110,
+   "protein_g": 3,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "peanuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-072",
+   "name": "Curd with fruits",
+   "slot": "snack",
+   "kcal": 180,
+   "protein_g": 8,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie"
+   ]
+  },
+  {
+   "id": "meal-073",
+   "name": "Protein: 200g curd + nuts",
+   "slot": "snack",
+   "kcal": 240,
+   "protein_g": 12,
+   "vegetarian": true,
+   "diets": [
+    "vegetarian",
+    "eggetarian",
+    "non-vegetarian"
+   ],
+   "allergens": [
+    "dairy",
+    "nuts"
+   ],
+   "goals": [
+    "weight-loss",
+    "general-health"
+   ],
+   "tags": [
+    "low-calorie",
+    "protein-moderate"
+   ]
+  }
+ ]
+}
